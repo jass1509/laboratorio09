@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Box Model — Tarjetas</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .cards-wrap{ display:flex; justify-content:space-around; align-items:flex-start; gap:20px; padding:20px; flex-wrap:wrap; }
+    .card-item{
+      border:3px solid #d3e2ff;
+      padding:18px;
+      margin:8px;
+      width:260px;
+      border-radius:12px;
+      background:linear-gradient(180deg,#fff,#fbfdff);
+    }
+    .card-item h3{ margin:0 0 8px; font-size:1.1rem; }
+    .card-item p{ margin:0; color:var(--muted); font-size:0.95rem;}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h2>Ejercicio: Modelo de cajas (tarjetas) — Uso de Flex</h2>
+    <div class="card row card-wrap card-row card">
+      <div class="cards-wrap">
+        <div class="card-item">
+          <h3>Tarjeta 1</h3>
+          <p>Padding: 18px; Border: 3px; Margin entre tarjetas.</p>
+        </div>
+        <div class="card-item">
+          <h3>Tarjeta 2</h3>
+          <p>Ejemplo de contenido. Observa el espacio interno y el borde.</p>
+        </div>
+        <div class="card-item">
+          <h3>Tarjeta 3</h3>
+          <p>Responsive: se ajusta al tamaño por flex-wrap.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

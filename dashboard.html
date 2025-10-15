@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .dash-grid{
+      display:grid;
+      grid-template-columns: 220px 1fr;
+      gap:18px;
+      min-height:70vh;
+    }
+    aside.sidebar{ padding:12px; background:var(--card); border-radius:8px; }
+    .content{ padding:12px; }
+    .stats{ display:flex; gap:12px; flex-wrap:wrap; }
+    .stat-card{
+      flex:1 1 180px;
+      border:1px solid #e6e9ef;
+      padding:14px;
+      border-radius:10px;
+      background:linear-gradient(180deg,#fff,#fbfdff);
+    }
+    .table card{}
+    @media(max-width:800px){ .dash-grid{ grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <div class="container dash-grid">
+    <aside class="sidebar card">
+      <h3>Sidebar</h3>
+      <ul>
+        <li>Dashboard</li>
+        <li>Usuarios</li>
+        <li>Reportes</li>
+      </ul>
+    </aside>
+
+    <section class="content">
+      <h2>Panel de control</h2>
+      <div class="stats">
+        <div class="stat-card card">
+          <h4>Usuarios</h4>
+          <p>1,234</p>
+        </div>
+        <div class="stat-card card">
+          <h4>Ventas</h4>
+          <p>567</p>
+        </div>
+        <div class="stat-card card">
+          <h4>Tráfico</h4>
+          <p>12,345</p>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;" class="card">
+        <h3>Actividad reciente</h3>
+        <p>Tabla o lista de eventos.</p>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

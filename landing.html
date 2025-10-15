@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .hero{
+      height:60vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      background:linear-gradient(90deg,#eef6ff,#fff);
+      border-radius:12px;
+      padding:24px;
+    }
+    .hero .box{ max-width:720px; }
+    .cta{
+      margin-top:12px;
+      padding:10px 16px;
+      border-radius:8px;
+      border:2px solid var(--accent);
+      background:transparent;
+      color:var(--accent);
+      font-weight:700;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header class="card">
+      <h1>Mi Producto</h1>
+    </header>
+
+    <section class="hero card">
+      <div class="box">
+        <h2>Encabezado principal centrado</h2>
+        <p class="muted">Descripción breve que resalta beneficios. Usa padding y bordes redondeados.</p>
+        <button class="cta">Comenzar</button>
+      </div>
+    </section>
+
+    <footer class="site-footer card">
+      <p>Pie de landing</p>
+    </footer>
+  </main>
+</body>
+</html>

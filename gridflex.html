@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Grid + Flex — Blog</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .blog-grid{
+      display:grid;
+      grid-template-columns: 220px 1fr;
+      grid-template-rows: auto 1fr auto;
+      gap:16px;
+      min-height:70vh;
+    }
+    header.header{ grid-column:1 / -1; padding:16px; }
+    nav.sidebar{ background:var(--card); padding:12px; border-radius:8px; }
+    main.main{ padding:12px; }
+    .articles{ display:flex; gap:12px; flex-wrap:wrap; }
+    .article{
+      flex:1 1 280px;
+      background:var(--card);
+      border:1px solid #e6e9ef;
+      padding:12px;
+      border-radius:8px;
+    }
+    aside{ background:var(--card); padding:12px; border-radius:8px; }
+    footer{ grid-column:1 / -1; padding:12px; text-align:center; }
+    @media(max-width:800px){
+      .blog-grid{ grid-template-columns: 1fr; }
+      nav.sidebar{ order:2; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container blog-grid">
+    <header class="header card">
+      <h2>Mi Blog — Grid + Flex</h2>
+    </header>
+
+    <nav class="sidebar card">
+      <h4>Menú</h4>
+      <ul>
+        <li>Inicio</li>
+        <li>Secciones</li>
+        <li>Contacto</li>
+      </ul>
+    </nav>
+
+    <main class="main">
+      <section class="articles">
+        <article class="article">
+          <h3>Artículo A</h3>
+          <p>Contenido del artículo. Cada artículo usa padding y border.</p>
+        </article>
+        <article class="article">
+          <h3>Artículo B</h3>
+          <p>Otro artículo del blog con el mismo ancho gracias a Flexbox.</p>
+        </article>
+        <article class="article">
+          <h3>Artículo C</h3>
+          <p>Más contenido de ejemplo.</p>
+        </article>
+      </section>
+    </main>
+
+    <aside class="card">
+      <h4>Sidebar / Widgets</h4>
+      <p>Enlaces y cosas útiles.</p>
+    </aside>
+
+    <footer class="card">
+      <p>Pie de página del blog</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Galería de Imágenes</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .gallery{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap:12px;
+      padding:12px;
+    }
+    .thumb{
+      border:1px solid #e6e9ef;
+      padding:8px;
+      background:#fff;
+      border-radius:8px;
+      overflow:hidden;
+      text-align:center;
+    }
+    .thumb img{ width:100%; height:160px; object-fit:cover; display:block; border-radius:6px; }
+    .thumb p{ margin:8px 0 0; color:var(--muted); font-size:0.9rem; }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h2>Galería responsive</h2>
+    <div class="gallery">
+      <div class="thumb card">
+        <img src="https://picsum.photos/seed/1/600/400" alt="ejemplo1">
+        <p>Imagen 1</p>
+      </div>
+      <div class="thumb card">
+        <img src="https://picsum.photos/seed/2/600/400" alt="ejemplo2">
+        <p>Imagen 2</p>
+      </div>
+      <div class="thumb card">
+        <img src="https://picsum.photos/seed/3/600/400" alt="ejemplo3">
+        <p>Imagen 3</p>
+      </div>
+      <div class="thumb card">
+        <img src="https://picsum.photos/seed/4/600/400" alt="ejemplo4">
+        <p>Imagen 4</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
